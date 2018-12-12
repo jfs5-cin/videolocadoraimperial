@@ -27,10 +27,23 @@ Wellyson Fernando Nunes Souza ([wfns@cin.ufpe.br](mailto:wfns@cin.ufpe.br))
 Vinicius Cardoso Garcia ([vcg@cin.ufpe.br](mailto:vcg@cin.ufpe.br))
 
 
-# 1.O PROJETO
+# 1. O PROJETO
 
 Este projeto te por finalidade o desenvolvimento de um sistema para a &quot;Video Locadora IMPERIAL&quot; conforme o contato realizado pelo representante da empresa mediante apresentação das definições de necessidades de funcionalidades que o sistema deve atender. Conforme anexo.
 
 Apos a análise das funcionalidades do sistema, foi definido a equipe para a desenvolvimento, qual o papel dos membros no projeto, qual metodologia será aplicada no desenvolvimento, bem como, definido o cronograma do projeto e o orçamento.
 
 Este projeto usara o repositório GitHUB.
+
+# 2. EQUIPE DO PROJETO E FUNÇÕES NO PROJETO
+
+- José Fernando da Silva ([jfs5@cin.ufpe.br](mailto:jfs5@cin.ufpe.br)) – Gerente do Projeto
+- Anderson Franca Ferreira ([aff2@cin.ufpe.br](mailto:aff2@cin.ufpe.br)) – Analista de Requisitos e Analista de arquitetura
+- Jobson Tenório do Nascimento ([jtn@cin.ufpe.br](mailto:jtn@cin.ufpe.br)) – Analista de Desenvolvimento
+- Wellyson Fernando Nunes Souza ([wfns@cin.ufpe.br](mailto:wfns@cin.ufpe.br)) – Analista de Desenvolvimento
+
+Após levantamento das habilidades dos membros da equipe detectou-se que para o melhor aproveitamento das habilidades as funções do projeto será dividido da seguinte forma:
+
+José Fernando da Silva será o gerente do projeto, Anderson França Ferreira será o analista de requisitos e analista de arquitetura e Jobson Tenório do Nascimento e Wellyson Fernando Nunes Souza serão os Desenvolvedores da aplicação.
+
+Ainda sobre as habilidades determinou-se que para o desenvolvimento da aplicação será adotado a metodologia ágil com desenvolvimento em pares visando a maior celeridade na entrega da aplicação e a correção e aprendizado no código desenvolvido.
