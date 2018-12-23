@@ -1,10 +1,10 @@
-# Locadora Imperial
+# ![logo](https://user-images.githubusercontent.com/45831481/50387253-0a317d80-06df-11e9-8ea3-6200851141dc.png)Locadora Imperial
 
 ## Diagrama Entidade Relacionamento Estendido e Dicionário de Dados
 
 ### Diagrama Entidade Relacionamento - ERE
 
-
+![ere video locadora imperial](https://user-images.githubusercontent.com/45831481/50387238-dbb3a280-06de-11e9-9697-a912c59dcec6.png)
 
 ### Dicionário de Dados
 
