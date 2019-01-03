@@ -12,15 +12,15 @@
 
 #### US003 - User Stories 003 - Alterar uma mídia como administrador
 
-**Como um** administrador **eu quero** alterar uma mídia podendo mudar o tipo da mídia (DVD, VHS, Blu-Ray e HD-DVD) e/ou valor  de locação de mídia **para que seja possível** corregir erros e/ou atualizar o valor de locação da mídia.
+**Como um** administrador **eu quero** alterar uma mídia informando o id podendo mudar o tipo da mídia (DVD, VHS, Blu-Ray e HD-DVD) e/ou valor  de locação de mídia **para que seja possível** corregir erros e/ou atualizar o valor de locação da mídia.
 
 #### US004 - User Stories 004 - Consultar uma mídia como administrador
 
-**Como um** administrador **eu quero** consultar uma mídia informando o id da mídia **para que seja possível** visualizar os dados da mídia (tipo e valor).
+**Como um** administrador **eu quero** consultar uma mídia informando o id **para que seja possível** visualizar os dados da mídia (tipo e valor).
 
 #### US005 - User Stories 005 - Excluir uma mídia como administrador
 
-**Como um** administrador **eu quero** excluir uma mídia informando o id da mídia **para que seja possível** remove-la do cadastro.
+**Como um** administrador **eu quero** excluir uma mídia informando o id **para que seja possível** remove-la do cadastro.
 
 #### US006 - User Stories 006 - Incluir um gênero como administrador
 
@@ -28,15 +28,47 @@
 
 #### US007 - User Stories 007 - Alterar um gênero como administrador
 
-**Como um** administrador **eu quero** alterar um gênero podendo mudar o tipo de descrição (Ação, Animação, Aventura, Comédia, Documentário, Drama, Ficção, Guerra, Musical, Policial, Romance, Suspense e  Terror) **para que seja possível** corregir erros na descrição do gênero.
+**Como um** administrador **eu quero** alterar um gênero informando o id podendo mudar o tipo de descrição (Ação, Animação, Aventura, Comédia, Documentário, Drama, Ficção, Guerra, Musical, Policial, Romance, Suspense e  Terror) **para que seja possível** corregir erros na descrição do gênero.
 
 #### US008 - User Stories 008 - Consultar um gênero como administrador
 
-**Como um** administrador **eu quero** consultar um gênero informando o id do gênero **para que seja possível** visualizar o dado do genero (descrição).
+**Como um** administrador **eu quero** consultar um gênero informando o id **para que seja possível** visualizar o dado do genero (descrição).
 
 #### US009 - User Stories 009 - Excluir um gênero como administrador
 
-**Como um** administrador **eu quero** excluir um gênero informando o id do gênero **para que seja possível** remove-lo do cadastro.
+**Como um** administrador **eu quero** excluir um gênero informando o id **para que seja possível** remove-lo do cadastro.
+
+#### US010 - User Stories 010 - Incluir uma distribuidora como administrador
+
+**Como um** administrador **eu quero** incluir uma distribuidora informando o cnpj, a razão social, pessoa de contato, telefone de contato, logradouro, numero, comlemento, bairro, cidade, estado e país **para que seja possível** incluir posteriormente em filmes informando a distribuidora.
+
+#### US011 - User Stories 011 - Alterar uma distribuidora como administrador
+
+**Como um** administrador **eu quero** alterar o cadastro de uma distribuidora informando o id podendo mudar o cnpj, a razão social, pessoa de contato, telefone de contato, logradouro, numero, comlemento, bairro, cidade, estado e país **para que seja possível** corregir erros no cadastro.
+
+#### US012 - User Stories 012 - Consultar uma distribuidora como administrador
+
+**Como um** administrador **eu quero** consultar uma distribuidora informando o id **para que seja possível** visualizar os dados da distribuidora (cnpj, a razão social, pessoa de contato, telefone de contato, logradouro, numero, comlemento, bairro, cidade, estado e país).
+
+#### US013 - User Stories 013 - Excluir uma distribuidora como administrador
+
+**Como um** administrador **eu quero** excluir uma distribuidora informando o id **para que seja possível** remove-la do cadastro.
+
+#### US014 - User Stories 014 - Incluir um tipo como administrador
+
+**Como um** administrador **eu quero** incluir um tipo informando uma descrição (catalogo ou lancamento), o prazo de devolução em dias e acrescimo em percentual **para que seja possível** incluir posteriormente nas midias informando o tipo.
+
+#### US015 - User Stories 015 - Alterar um tipo como administrador
+
+**Como um** administrador **eu quero** alterar o cadastro de um tipo informando o id podendo mudar uma descrição (catalogo ou lancamento), o prazo de devolução em dias e acrescimo em percentual **para que seja possível** corregir erros no cadastro.
+
+#### US016 - User Stories 016 - Consultar um tipo como administrador
+
+**Como um** administrador **eu quero** consultar um tipo informando o id **para que seja possível** visualizar os dados do tipo (descrição -catalogo ou lancamento-, o prazo de devolução em dias e acrescimo em percentual).
+
+#### US017 - User Stories 017 - Excluir um tipo como administrador
+
+**Como um** administrador **eu quero** excluir um tipo informando o id **para que seja possível** remove-la do cadastro.
 
 #### US101 - User Stories 101 - Acesso ao sistema como atendente
 
