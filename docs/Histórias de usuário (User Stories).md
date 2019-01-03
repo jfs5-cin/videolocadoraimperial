@@ -70,6 +70,38 @@
 
 **Como um** administrador **eu quero** excluir um tipo informando o id **para que seja possível** remove-la do cadastro.
 
+#### US018 - User Stories 018 - Incluir um filme como administrador
+
+**Como um** administrador **eu quero** incluir um filme informando o titulo, titulo original, país, ano, direção, elenco, sinopse, duração, gênero, tipo e distribuidora **para que seja possível** incluir posteriormente no item informando o filme.
+
+#### US019 - User Stories 019 - Alterar um filme como administrador
+
+**Como um** administrador **eu quero** alterar o cadastro de um filme informando o id, ajustando o titulo, titulo original, país, ano, direção, elenco, sinopse, duração, gênero, tipo e distribuidora **para que seja possível** corregir erros no cadastro.
+
+#### US020 - User Stories 020 - Consultar um filme como administrador
+
+**Como um** administrador **eu quero** consultar um filme informando o id **para que seja possível** visualizar o titulo, titulo original, país, ano, direção, elenco, sinopse, duração, gênero, tipo e distribuidora.
+
+#### US021 - User Stories 021 - Excluir um filme como administrador
+
+**Como um** administrador **eu quero** excluir um filme informando o id **para que seja possível** remove-lo do cadastro.
+
+#### US022 - User Stories 022 - Incluir um item como administrador
+
+**Como um** administrador **eu quero** incluir um item informando o numero de serie, data de aquisição, filme e mídia **para que seja possível** locar para um cliente.
+
+#### US023 - User Stories 023 - Alterar um item como administrador
+
+**Como um** administrador **eu quero** alterar o cadastro de um item informando o id, ajustando o numero de serie, data de aquisição, filme e mídia **para que seja possível** corregir erros no cadastro.
+
+#### US024 - User Stories 024 - Consultar um item como administrador
+
+**Como um** administrador **eu quero** consultar um item informando o id **para que seja possível** visualizar o numero de serie, data de aquisição, filme e mídia.
+
+#### US025 - User Stories 025 - Excluir um item como administrador
+
+**Como um** administrador **eu quero** excluir um item informando o id **para que seja possível** remove-lo do cadastro.
+
 #### US101 - User Stories 101 - Acesso ao sistema como atendente
 
 **Como um** atendente **eu quero** acessar o sistema informando minhas credenciais de acesso (usuário e senha) **para que seja possível** acessar as funcionalidades de atendimento a clientes.
