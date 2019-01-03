@@ -4,7 +4,7 @@
 
 ### Diagrama Entidade Relacionamento - ERE
 
-![](.\ERE Vídeo Locadora Imperial.png)
+![](./ERE Vídeo Locadora Imperial.png)
 
 ### Dicionário de Dados
 
