@@ -102,6 +102,22 @@
 
 **Como um** administrador **eu quero** excluir um item informando o id **para que seja possível** remove-lo do cadastro.
 
+#### US026 - User Stories 026 - Incluir um usuário como administrador
+
+**Como um** administrador **eu quero** incluir um usuário informando o nome, email, email de verificação, senha e tokem para redefinir senha **para que seja possível** acessar o sistema da locadora.
+
+#### US027 - User Stories 027 - Alterar um usuário como administrador
+
+**Como um** administrador **eu quero** alterar o cadastro de um usuário informando o id, ajustando o nome, email, email de verificação, senha e tokem para redefinir senha **para que seja possível** corregir erros no cadastro.
+
+#### US028 - User Stories 028 - Consultar um usuário como administrador
+
+**Como um** administrador **eu quero** consultar um usuário informando o id **para que seja possível** visualizar o nome, email.
+
+#### US029 - User Stories 029 - Excluir um usuário como administrador
+
+**Como um** administrador **eu quero** excluir um usuário informando o id **para que seja possível** remove-lo do cadastro.
+
 #### US101 - User Stories 101 - Acesso ao sistema como atendente
 
 **Como um** atendente **eu quero** acessar o sistema informando minhas credenciais de acesso (usuário e senha) **para que seja possível** acessar as funcionalidades de atendimento a clientes.
