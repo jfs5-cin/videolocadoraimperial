@@ -154,6 +154,22 @@
 
 **Como um** atendente **eu quero** excluir dependente de um cliente titular informando o id ou o nome do cliente titular ou dependente **para que seja possível** remove-lo do cadastro.
 
+#### US110 - User Stories 110 - Ativar cliente titular como atendente
+
+**Como um** atendente **eu quero** ativar cliente titular informando o id ou o nome do cliente titular **para que seja possível** o cliente titular locar itens.
+
+#### US111 - User Stories 111 - Desativar cliente titular como atendente
+
+**Como um** atendente **eu quero** desativar cliente titular informando o id ou o nome do cliente titular **para que não seja possível** o cliente titular locar itens.
+
+#### US112 - User Stories 112 - Ativar dependente de cliente titular como atendente
+
+**Como um** atendente **eu quero** ativar o dependente de um cliente titular informando o id ou o nome do cliente titular ou do dependente **para que seja possível** o dependente de um cliente titular locar itens.
+
+#### US113 - User Stories 113 - Desativar dependente de cliente titular como atendente
+
+**Como um** atendente **eu quero** desativar o dependente de um cliente titular informando o id ou o nome do cliente titular ou do dependente **para que não seja possível** o dependente de um cliente titular locar itens.
+
 #### US201 - User Stories 201 - Consulta simples ao acervo
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
