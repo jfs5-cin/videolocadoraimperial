@@ -122,6 +122,38 @@
 
 **Como um** atendente **eu quero** acessar o sistema informando minhas credenciais de acesso (usuário e senha) **para que seja possível** acessar as funcionalidades de atendimento a clientes.
 
+#### US0102 - User Stories 102 - Cadastrar um cliente titular como atendente
+
+**Como um** atedente **eu quero** cadastrar um cliente titular se for maior de idade informando o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento **para que seja possível** o cliente locar itens.
+
+#### US0103 - User Stories 103 - Alterar um cliente titular como atendente
+
+**Como um** atendente **eu quero** alterar o cadastro de um cliente titular informando o id ou o nome, ajustando o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento **para que seja possível** corregir erros no cadastro.
+
+#### US104 - User Stories 104 - Consultar um cliente titular como atendente
+
+**Como um** atendente **eu quero** consultar um cliente titular informando o id ou o nome **para que seja possível** visualizar o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento.
+
+#### US105 - User Stories 105 - Excluir um cliente titular como atendente
+
+**Como um** atendente **eu quero** excluir um cliente titular informando o id ou o nome **para que seja possível** remove-lo do cadastro.
+
+#### US0106 - User Stories 106 - Cadastrar dependente de cliente titular como atendente
+
+**Como um** atedente **eu quero** cadastrar ate três dependentes de cliente titular informando o id ou nome do titular, nome do dependente, email do dependente, sexo do dependente e data de nascimento do dependente **para que seja possível** os dependentes locar itens.
+
+#### US0107 - User Stories 107 - Alterar dependente de cliente titular como atendente
+
+**Como um** atendente **eu quero** alterar o cadastro de dependente de cliente titular informando o id ou o nome do cliente titular ou dependente, ajustando nome do dependente, email do dependente, sexo do dependente e data de nascimento do dependente **para que seja possível** corregir erros no cadastro.
+
+#### US108 - User Stories 108 - Consultar dependente de cliente titular como atendente
+
+**Como um** atendente **eu quero** consultar dependente de cliente titular informando o id ou o nome do cliente titular ou dependente **para que seja possível** visualizar nome do dependente, email do dependente, sexo do dependente e data de nascimento do dependente.
+
+#### US109 - User Stories 109 - Excluir dependente de cliente titular como atendente
+
+**Como um** atendente **eu quero** excluir dependente de um cliente titular informando o id ou o nome do cliente titular ou dependente **para que seja possível** remove-lo do cadastro.
+
 #### US201 - User Stories 201 - Consulta simples ao acervo
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
