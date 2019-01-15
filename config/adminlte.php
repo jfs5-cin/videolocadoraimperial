@@ -134,6 +134,7 @@ return [
             'text' => 'Gênero',
             'icon' => 'tags',
             'can'  => 'administrator',
+			'route'=> 'genre.index',
         ],
         [
             'text' => 'Tipo',
@@ -145,6 +146,7 @@ return [
             'text' => 'Mídia',
             'icon' => 'compact-disc',
             'can'  => 'administrator',
+            'route'=> 'media.index',
         ],
         [
             'text' => 'Distribuidora',
