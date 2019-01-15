@@ -29,3 +29,11 @@ Route::post('/senha/recuperar', 'Auth\ResetPasswordController@reset');
 Route::get('/senha/recuperar/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::get('/senha/alterar', 'HomeController@change_password')->name('password.change');
 Route::put('/senha/alterar', 'HomeController@update_password');
+
+/* Rotas do model Type */
+Route::get('/tipo','TypeController@index')->name('type.index');
+Route::get('/tipo/adicionar','TypeController@create')->name('type.create');
+Route::post('/tipo/adicionar','TypeController@store');
+Route::get('/tipo/{id}/editar','TypeController@edit')->name('type.edit');
+Route::put('/tipo/{id}/editar','TypeController@update');
+Route::delete('/tipo/{id}/remover','TypeController@destroy')->name('type.destroy');

@@ -139,6 +139,7 @@ return [
             'text' => 'Tipo',
             'icon' => 'flag',
             'can'  => 'administrator',
+            'route'=> 'type.index',
         ],
         [
             'text' => 'Mídia',
