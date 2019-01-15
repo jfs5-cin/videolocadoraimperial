@@ -170,10 +170,50 @@
 
 **Como um** atendente **eu quero** desativar o dependente de um cliente titular informando o id ou o nome do cliente titular ou do dependente **para que não seja possível** o dependente de um cliente titular locar itens.
 
-#### US201 - User Stories 201 - Consulta simples ao acervo
+#### US114 - User Stories 114 - Cadastro de Reserva de filme para cliente titular como atendente
+
+**Como um** atendente **eu quero** reservar de filmes para cliente titular informando o id ou nome do cliente titular, a data e hora da reserva, filme ou id do filme e o tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar filmes para cliente titular.
+
+#### US115 - User Stories 115 - Consulta de Reserva de filme para cliente titular como atendente
+
+**Como um** atendente **eu quero** consultar reserva de filmes  para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** visualizar o nome do cliente titular, a data e hora da reserva, filme e o tipo de midia.
+
+#### US116 - User Stories 116 -Alteração de Reserva de filme para cliente titular como atendente
+
+**Como um** atendente **eu quero** alterar a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
+
+#### US117 - User Stories 117 -Exclusão de Reserva de filme para cliente titular como atendente
+
+**Como um** atendente **eu quero** excluir a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** remove-lo do cadastro reserva.
+
+#### US118 - User Stories 118 - Cadastro de Reserva de filme para dependente como atendente
+
+**Como um** atendente **eu quero** reservar filmes para dependente informando o id ou nome do dependente, data e hora da reserva, filme ou id do filme e tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar filmes para dependente.
+
+#### US119 - User Stories 119 - Consulta de Reserva de filme para dependente como atendente
+
+**Como um** atendente **eu quero** consultar reserva de filmes  para dependente informando o id ou nome do dependente ou, id ou nome do filme **para que seja possível** visualizar o nome do dependente, a data e hora da reserva, filme e o tipo de midia.
+
+#### US120 - User Stories 120 -Alteração de Reserva de filme para dependente como atendente
+
+**Como um** atendente **eu quero** alterar a reserva de filmes para dependente informando o id ou nome do dependente ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
+
+#### US121 - User Stories 121 -Exclusão de Reserva de filme para dependente como atendente
+
+**Como um** atendente **eu quero** excluir a reserva de filmes para dependente informando o id ou o nome do ependenter ou, id do filme **para que seja possível** remove-lo do cadastro reserva.
+
+#### US201 - User Stories 201 - Consulta simples ao acervo como cliente
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
 
-#### US202 - User Stories 202 - Consulta avançada ao acervo
+#### US202 - User Stories 202 - Consulta avançada ao acervo como cliente
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português, e/ou informando gênero, tipo de mídia disponível, ator, diretor, nacionalidade, lançamentos **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
+
+#### US301 - User Stories 301 -Exclusão de Reserva de filme para cliente titular ou dependentes como sistema
+
+**Como um** sistema **eu quero** excluir automaticamente a reserva de filmes para cliente titular ou dependentes caso o filme esteja disponivel por mais de 24horas **para que seja possível**disponibilizar o filme para locação.
+
+#### US302 - User Stories 302 -Envio de email para cliente titular ou dependente como sistema
+
+**Como um** sistema **eu quero** de acordo com a data mais antiga do cadastro de reserva, enviar automaticamente um email para cliente titular ou dependente informando o filme e o tipo de midia esta disponivel, logo que estes forem devolvidos **para que seja possível** estes clientes locar este filme.
