@@ -13,6 +13,8 @@
 
 /* Rotas da área pública */
 Route::get('/', 'SiteController@index')->name('index');
+Route::post('/', 'SiteController@index');
+Route::get('/filme/{id}', 'SiteController@movie_details')->name('movie_details');
 
 /* Rotas da área administrativa */
 Route::get('/locadora', 'HomeController@index')->name('home');
