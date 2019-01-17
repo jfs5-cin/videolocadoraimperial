@@ -4,11 +4,19 @@
 
 #### US001 - User Stories 001 - Acesso ao sistema como administrador
 
-**Como um** administrador **eu quero** acessar o sistema informando minhas credenciais de acesso (usuário e senha) **para que seja possível** acessar as funcionalidades para controlar o acervo da locadora.
+**Como um** administrador **eu quero** acessar o sistema  **para que seja possível** utilizar as funcionalidades para controlar o acervo da locadora.
+
+##### Criterios de Aceitação US001
+
+. O administrador não pode acessar a área restrita do sistema se não informar suas credenciais (usuário e senha).
+
+. Se for informado usuário e/ou senha incorretos, informar "Estas Credenciais não correspodem aos nossos registros".
 
 #### US002 - User Stories 002 - Incluir uma mídia como administrador
 
 **Como um** administrador **eu quero** incluir uma mídia informando o tipo da mídia (DVD, VHS, Blu-Ray e HD-DVD) e o valor  de locação de mídia **para que seja possível** incluir posteriormente itens informando o tipo de mídia.
+
+##### 	Criterios de Aceitação
 
 #### US003 - User Stories 003 - Alterar uma mídia como administrador
 
@@ -104,11 +112,11 @@
 
 #### US026 - User Stories 026 - Incluir um usuário como administrador
 
-**Como um** administrador **eu quero** incluir um usuário informando o nome, email, tipo de usuario e senha fornecido pelo usuario**para que seja possível** acessar o sistema da locadora.
+**Como um** administrador **eu quero** incluir um usuário informando o nome, email, email de verificação, senha e tokem para redefinir senha **para que seja possível** acessar o sistema da locadora.
 
 #### US027 - User Stories 027 - Alterar um usuário como administrador
 
-**Como um** administrador **eu quero** alterar o cadastro de um usuário informando o id, ajustando o nome, email, tipo de usuario, senha fornecido pelo usuario **para que seja possível** corregir erros no cadastro.
+**Como um** administrador **eu quero** alterar o cadastro de um usuário informando o id, ajustando o nome, email, email de verificação, senha e tokem para redefinir senha **para que seja possível** corregir erros no cadastro.
 
 #### US028 - User Stories 028 - Consultar um usuário como administrador
 
@@ -170,37 +178,99 @@
 
 **Como um** atendente **eu quero** desativar o dependente de um cliente titular informando o id ou o nome do cliente titular ou do dependente **para que não seja possível** o dependente de um cliente titular locar itens.
 
-#### US114 - User Stories 114 - Cadastro de Reserva de filme para cliente titular como atendente
+#### US114 - User Stories 114 - Cadastro de Reserva de filme para cliente como atendente
 
-**Como um** atendente **eu quero** reservar de filmes para cliente titular informando o id ou nome do cliente titular, a data e hora da reserva, filme ou id do filme e o tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar filmes para cliente titular.
+**Como um** atendente **eu quero** reservar filmes para cliente  **para que seja possível** atender a necessidade do cliente.
 
-#### US115 - User Stories 115 - Consulta de Reserva de filme para cliente titular como atendente
+##### Criterios de Aceitação US114
+
+. O atendente deve reservar os filmes para titular e dependente cadastrados no sistema (Id e/ou nome).
+
+. O atendente deve informar a data e hora da reserva no sistema.
+
+. O atendente deve informar os filmes cadastrados no sistema para reserva (Id e/ou nome).
+
+. O atendente deve informar o tipo de mídia no sistema para reserva (Id e/ou nome).
+
+. O atendente so deve reservar itens do mesmo tipo de midia que não estejam disposnível na locadora.
+
+. Se alguns dos dados estiverem incorretos, o sistema informa "Dados Incorretos".
+
+. Se o tipo o filme para aquele tipo de midia estiver na locadora, informar "Mídia Disponível na Locadora".
+
+#### US115 - User Stories 115 - Consulta de Reserva de filme para cliente como atendente
 
 **Como um** atendente **eu quero** consultar reserva de filmes  para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** visualizar o nome do cliente titular, a data e hora da reserva, filme e o tipo de midia.
 
-#### US116 - User Stories 116 -Alteração de Reserva de filme para cliente titular como atendente
+#### US116 - User Stories 116 -Alteração de Reserva de filme para cliente como atendente
 
 **Como um** atendente **eu quero** alterar a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
 
-#### US117 - User Stories 117 -Exclusão de Reserva de filme para cliente titular como atendente
+#### US117 - User Stories 117 -Cancelamento de Reserva de filme para cliente como atendente
+
+**Como um** atendente **eu quero** cancelar  reserva de filmes **para que seja possível** remove-lo do cadastro reserva.
+
+##### Criterios de Aceitação US117
+
+. O atendente deve informar os dados do titular e/ou dependente e/ou do filme cadastrados no sistema.
+
+. Se alguns dos dados estiverem incorretos, o sistema informa "Dados Incorretos".
+
+#### US118 - User Stories 118 - Registro de Locação como atendente
+
+**Como um** atendente **eu quero** registrar locações **para que seja possível** locar itens para clientes.
+
+##### Criterios de Aceitação US118
+
+. O atendente deve registrar as locações para titular e/ou dependente cadastrados no sistema.
+
+. O atendente deve informar os itens cadastrados no sistema.
+
+. O atendente deve informar a data do inicio da locação no sistema.
+
+. O atendente deve informar o valor da locação no sistema.
+
+. O atendente deve informar a data de devolução prevista de cada item no sistema.
+
+#### US119 - User Stories 119 - Consulta de Registro de Locação como atendente
+
+**Como um** atendente **eu quero** consultar reserva de filmes  para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** visualizar o nome do cliente titular, a data e hora da reserva, filme e o tipo de midia.
+
+#### US120 - User Stories 120 -Alteração de Registro de Locação como atendente
+
+**Como um** atendente **eu quero** alterar a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
+
+#### US121 - User Stories 121 -Exclusão de Registro de Locação como atendente
 
 **Como um** atendente **eu quero** excluir a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** remove-lo do cadastro reserva.
 
-#### US118 - User Stories 118 - Cadastro de Reserva de filme para dependente como atendente
+#### US122 - User Stories 122 - Registro de Devolução de Itens como atendente
 
-**Como um** atendente **eu quero** reservar filmes para dependente informando o id ou nome do dependente, data e hora da reserva, filme ou id do filme e tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar filmes para dependente.
+**Como um** atendente **eu quero** registrar devoluções de itens **para que seja possível** receber os itens que foram locados.
 
-#### US119 - User Stories 119 - Consulta de Reserva de filme para dependente como atendente
+##### Criterios de Aceitação US122
 
-**Como um** atendente **eu quero** consultar reserva de filmes  para dependente informando o id ou nome do dependente ou, id ou nome do filme **para que seja possível** visualizar o nome do dependente, a data e hora da reserva, filme e o tipo de midia.
+. O atendente deve registrar as locações para titular e/ou dependente cadastrados no sistema.
 
-#### US120 - User Stories 120 -Alteração de Reserva de filme para dependente como atendente
+. O atendente deve informar os itens cadastrados no sistema.
 
-**Como um** atendente **eu quero** alterar a reserva de filmes para dependente informando o id ou nome do dependente ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
+. O atendente deve informar a data do inicio da locação no sistema.
 
-#### US121 - User Stories 121 -Exclusão de Reserva de filme para dependente como atendente
+. O atendente deve informar o valor da locação no sistema.
 
-**Como um** atendente **eu quero** excluir a reserva de filmes para dependente informando o id ou o nome do ependenter ou, id do filme **para que seja possível** remove-lo do cadastro reserva.
+. O atendente deve informar a data de devolução prevista de cada item no sistema.
+
+#### US123 - User Stories 123 - Consulta de Devolução de Itens como atendente
+
+**Como um** atendente **eu quero** registrar devoluções de itens **para que seja possível** visualizar o nome do cliente titular, a data e hora da reserva, filme e o tipo de midia.
+
+#### US124 - User Stories 124 -Alteração de Devolução de Itens como atendente
+
+**Como um** atendente **eu quero** alterar o registro de devoluções de itens **para que seja possível** corregir erros no cadastro.
+
+#### US125 - User Stories 125 -Exclusão de Devolução de Itens como atendente
+
+**Como um** atendente **eu quero** excluiro registro de devoluções de itens **para que seja possível** remove-lo do cadastro reserva.
 
 #### US201 - User Stories 201 - Consulta simples ao acervo como cliente
 
