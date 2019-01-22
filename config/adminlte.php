@@ -163,6 +163,7 @@ return [
             'text' => 'Item',
             'icon' => 'box',
             'can'  => 'administrator',
+            'route'=> 'item.index',
         ],
         [
             'text' => 'Cliente',

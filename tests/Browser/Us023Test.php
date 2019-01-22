@@ -13,13 +13,15 @@ class Us023Test extends DuskTestCase
     public function testEditItemBtn()
     {
         $this->browse(function (Browser $browser) {
-            $href = route('item.edit', 14);
+            $item = Item::where('serial_number', '09876543211234567890')->first();
+            $href = route('item.edit', $item);
             $browser->loginAs(User::find(1))
                     ->visit('/item')
                     ->waitForText('Itens')
+                    ->keys("#DataTables_Table_0_filter input", '09876543211234567890', '{enter}')
                     ->click("a[href='$href']")
                     ->waitForText('Modificar Item')
-                    ->assertPathIs('/item/14/editar');
+                    ->assertPathIs('/item/' . $item->id . '/editar');
         });
     }
 

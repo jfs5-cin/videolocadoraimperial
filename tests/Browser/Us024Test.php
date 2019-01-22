@@ -15,10 +15,11 @@ class Us024Test extends DuskTestCase
             $browser->loginAs(User::find(1))
                     ->visit('/item')
                     ->waitForText('Itens')
-                    ->assertSee('00293631781094524893')
-                    ->assertSee('02/01/2019')
-                    ->assertSee('Homem-Aranha no Aranhaverso')
-                    ->assertSee('HD-DVD');
+                    ->keys("#DataTables_Table_0_filter input", '09876543211234567890', '{enter}')
+                    ->assertSee('09876543211234567890')
+                    ->assertSee('17/01/2019')
+                    ->assertSee('Aquaman')
+                    ->assertSee('Blu-Ray');
         });
     }
 

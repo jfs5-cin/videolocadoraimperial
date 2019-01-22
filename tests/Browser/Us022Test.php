@@ -67,7 +67,7 @@ class Us022Test extends DuskTestCase
                     ->assertSee('O campo filme é obrigatório.')
                     ->assertSee('O campo mídia é obrigatório.');
         });
-        $this->assertDatabaseMissing('types',
+        $this->assertDatabaseMissing('items',
         [
             'serial_number' => '',
             'purchase_date' => '',

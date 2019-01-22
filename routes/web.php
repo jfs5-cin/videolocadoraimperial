@@ -61,3 +61,11 @@ Route::post('/distribuidora/adicionar','DistributorController@store');
 Route::get('/distribuidora/{id}/editar','DistributorController@edit')->name('distributor.edit');
 Route::put('/distribuidora/{id}/editar','DistributorController@update');
 Route::delete('/distribuidora/{id}/remover','DistributorController@destroy')->name('distributor.destroy');
+
+/* Rotas do model Item */
+Route::get('/item','ItemController@index')->name('item.index');
+Route::get('/item/adicionar','ItemController@create')->name('item.create');
+Route::post('/item/adicionar','ItemController@store');
+Route::get('/item/{id}/editar','ItemController@edit')->name('item.edit');
+Route::put('/item/{id}/editar','ItemController@update');
+Route::delete('/item/{id}/remover','ItemController@destroy')->name('item.destroy');
