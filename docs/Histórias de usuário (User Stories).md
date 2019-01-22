@@ -122,85 +122,45 @@
 
 **Como um** atendente **eu quero** acessar o sistema informando minhas credenciais de acesso (usuário e senha) **para que seja possível** acessar as funcionalidades de atendimento a clientes.
 
-#### US0102 - User Stories 102 - Cadastrar um cliente titular como atendente
+#### US0102 - User Stories 102 - Cadastrar um cliente como atendente
 
-**Como um** atedente **eu quero** cadastrar um cliente titular se for maior de idade informando o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento **para que seja possível** o cliente locar itens.
+**Como um** atedente **eu quero** cadastrar cliente titular maior de 18, o nome, email, endereço, telefone (residencial, comercial, celular), endereço de trabalho, sexo, cpf e data de nascimento. E ate três dependentes, o nome, email, sexo e data de nascimento **para que seja possível** o cliente locar itens.
 
-#### US0103 - User Stories 103 - Alterar um cliente titular como atendente
+#### US0103 - User Stories 103 - Alterar um cliente como atendente
 
-**Como um** atendente **eu quero** alterar o cadastro de um cliente titular informando o id ou o nome, ajustando o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento **para que seja possível** corregir erros no cadastro.
+**Como um** atendente **eu quero** alterar o cadastro de um cliente informando o id ou o nome, ajustando o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento **para que seja possível** corregir erros no cadastro.
 
-#### US104 - User Stories 104 - Consultar um cliente titular como atendente
+#### US104 - User Stories 104 - Consultar um cliente como atendente
 
-**Como um** atendente **eu quero** consultar um cliente titular informando o id ou o nome **para que seja possível** visualizar o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento.
+**Como um** atendente **eu quero** consultar um cliente informando o id ou o nome **para que seja possível** visualizar o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento.
 
-#### US105 - User Stories 105 - Excluir um cliente titular como atendente
+#### US105 - User Stories 105 - Excluir um cliente como atendente
 
-**Como um** atendente **eu quero** excluir um cliente titular informando o id ou o nome **para que seja possível** remove-lo do cadastro.
+**Como um** atendente **eu quero** excluir um cliente, caso este não tenha nenhum histórico de locação ou reserva, informando o id ou o nome **para que seja possível** remove-lo do cadastro.
 
-#### US0106 - User Stories 106 - Cadastrar dependente de cliente titular como atendente
+#### US106 - User Stories 106 - Ativar cliente como atendente
 
-**Como um** atedente **eu quero** cadastrar ate três dependentes de cliente titular informando o id ou nome do titular, nome do dependente, email do dependente, sexo do dependente e data de nascimento do dependente **para que seja possível** os dependentes locar itens.
+**Como um** atendente **eu quero** ativar cliente informando o id ou o nome do cliente **para que seja possível** o cliente locar itens e seus dependentes.
 
-#### US0107 - User Stories 107 - Alterar dependente de cliente titular como atendente
+#### US107 - User Stories 107 - Desativar cliente como atendente
 
-**Como um** atendente **eu quero** alterar o cadastro de dependente de cliente titular informando o id ou o nome do cliente titular ou dependente, ajustando nome do dependente, email do dependente, sexo do dependente e data de nascimento do dependente **para que seja possível** corregir erros no cadastro.
+**Como um** atendente **eu quero** desativar cliente informando o id ou o nome do cliente **para que não seja possível** o cliente locar itens e seus dependentes.
 
-#### US108 - User Stories 108 - Consultar dependente de cliente titular como atendente
+#### US108 - User Stories 108 - Cadastro de Reserva de itens para cliente como atendente
 
-**Como um** atendente **eu quero** consultar dependente de cliente titular informando o id ou o nome do cliente titular ou dependente **para que seja possível** visualizar nome do dependente, email do dependente, sexo do dependente e data de nascimento do dependente.
+**Como um** atendente **eu quero** reservar de itens para cliente adiplente informando o id ou nome do cliente, a data e hora da reserva, filme ou id do filme e o tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar itens para cliente.
 
-#### US109 - User Stories 109 - Excluir dependente de cliente titular como atendente
+#### US109 - User Stories 109 - Consulta de Reserva de itens para cliente como atendente
 
-**Como um** atendente **eu quero** excluir dependente de um cliente titular informando o id ou o nome do cliente titular ou dependente **para que seja possível** remove-lo do cadastro.
+**Como um** atendente **eu quero** consultar reserva de itens  para cliente informando o id ou o nome do cliente ou, id ou nome do filme **para que seja possível** visualizar o nome do cliente  a data e hora da reserva, nome e o tipo de midia.
 
-#### US110 - User Stories 110 - Ativar cliente titular como atendente
+#### US110 - User Stories 110 -Alteração de Reserva de itens para cliente como atendente
 
-**Como um** atendente **eu quero** ativar cliente titular informando o id ou o nome do cliente titular **para que seja possível** o cliente titular locar itens.
+**Como um** atendente **eu quero** alterar a reserva de itens para cliente informando o id ou o nome do cliente ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
 
-#### US111 - User Stories 111 - Desativar cliente titular como atendente
+#### US111 - User Stories 111 -Cancelamento de Reserva de itens para cliente como atendente
 
-**Como um** atendente **eu quero** desativar cliente titular informando o id ou o nome do cliente titular **para que não seja possível** o cliente titular locar itens.
-
-#### US112 - User Stories 112 - Ativar dependente de cliente titular como atendente
-
-**Como um** atendente **eu quero** ativar o dependente de um cliente titular informando o id ou o nome do cliente titular ou do dependente **para que seja possível** o dependente de um cliente titular locar itens.
-
-#### US113 - User Stories 113 - Desativar dependente de cliente titular como atendente
-
-**Como um** atendente **eu quero** desativar o dependente de um cliente titular informando o id ou o nome do cliente titular ou do dependente **para que não seja possível** o dependente de um cliente titular locar itens.
-
-#### US114 - User Stories 114 - Cadastro de Reserva de filme para cliente titular como atendente
-
-**Como um** atendente **eu quero** reservar de filmes para cliente titular informando o id ou nome do cliente titular, a data e hora da reserva, filme ou id do filme e o tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar filmes para cliente titular.
-
-#### US115 - User Stories 115 - Consulta de Reserva de filme para cliente titular como atendente
-
-**Como um** atendente **eu quero** consultar reserva de filmes  para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** visualizar o nome do cliente titular, a data e hora da reserva, filme e o tipo de midia.
-
-#### US116 - User Stories 116 -Alteração de Reserva de filme para cliente titular como atendente
-
-**Como um** atendente **eu quero** alterar a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
-
-#### US117 - User Stories 117 -Exclusão de Reserva de filme para cliente titular como atendente
-
-**Como um** atendente **eu quero** excluir a reserva de filmes para cliente titular informando o id ou o nome do cliente titular ou, id ou nome do filme **para que seja possível** remove-lo do cadastro reserva.
-
-#### US118 - User Stories 118 - Cadastro de Reserva de filme para dependente como atendente
-
-**Como um** atendente **eu quero** reservar filmes para dependente informando o id ou nome do dependente, data e hora da reserva, filme ou id do filme e tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar filmes para dependente.
-
-#### US119 - User Stories 119 - Consulta de Reserva de filme para dependente como atendente
-
-**Como um** atendente **eu quero** consultar reserva de filmes  para dependente informando o id ou nome do dependente ou, id ou nome do filme **para que seja possível** visualizar o nome do dependente, a data e hora da reserva, filme e o tipo de midia.
-
-#### US120 - User Stories 120 -Alteração de Reserva de filme para dependente como atendente
-
-**Como um** atendente **eu quero** alterar a reserva de filmes para dependente informando o id ou nome do dependente ou, id ou nome do filme **para que seja possível** corregir erros no cadastro.
-
-#### US121 - User Stories 121 -Exclusão de Reserva de filme para dependente como atendente
-
-**Como um** atendente **eu quero** excluir a reserva de filmes para dependente informando o id ou o nome do ependenter ou, id do filme **para que seja possível** remove-lo do cadastro reserva.
+**Como um** atendente **eu quero** cancelar uma reserva de itens para cliente informando o id ou o nome do cliente ou, id ou nome do filme **para que seja possível** disponibiliza-lo para reserva para outro cliente.
 
 #### US201 - User Stories 201 - Consulta simples ao acervo como cliente
 
@@ -210,10 +170,10 @@
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português, e/ou informando gênero, tipo de mídia disponível, ator, diretor, nacionalidade, lançamentos **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
 
-#### US301 - User Stories 301 -Exclusão de Reserva de filme para cliente titular ou dependentes como sistema
+#### US301 - User Stories 301 -Expiração do tempo de Reserva de filme para cliente como sistema
 
-**Como um** sistema **eu quero** excluir automaticamente a reserva de filmes para cliente titular ou dependentes caso o filme esteja disponivel por mais de 24horas **para que seja possível**disponibilizar o filme para locação.
+**Como um** sistema **eu quero** informar automaticamente a expiração do tempo de reserva de filmes para cliente caso o filme esteja disponivel por mais de 24 horas **para que seja possível** disponibilizar o filme para locação.
 
-#### US302 - User Stories 302 -Envio de email para cliente titular ou dependente como sistema
+#### US302 - User Stories 302 -Envio de email para cliente como sistema
 
-**Como um** sistema **eu quero** de acordo com a data mais antiga do cadastro de reserva, enviar automaticamente um email para cliente titular ou dependente informando o filme e o tipo de midia esta disponivel, logo que estes forem devolvidos **para que seja possível** estes clientes locar este filme.
+**Como um** sistema **eu quero** de acordo com a data mais antiga do cadastro de reserva, enviar automaticamente um email para um cliente informando o filme e o tipo de midia esta disponivel, logo que estes forem devolvidos **para que seja possível** o cliente locar este filme.
