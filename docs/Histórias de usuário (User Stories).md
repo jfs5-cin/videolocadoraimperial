@@ -162,6 +162,42 @@
 
 **Como um** atendente **eu quero** cancelar uma reserva de itens para cliente informando o id ou o nome do cliente ou, id ou nome do filme **para que seja possível** disponibiliza-lo para reserva para outro cliente.
 
+#### US112 - User Stories 112 - Cadastro de Locação de itens para cliente como atendente
+
+**Como um** atendente **eu quero** locar itens para cliente adiplente informando o id ou nome do cliente, a data e valorda locação, itens locados e data prevista de devolução para cada item **para que seja possível** atender o cliente.
+
+#### US113 - User Stories 113 - Consulta de Locação de itens para cliente como atendente
+
+**Como um** atendente **eu quero** consultar locação de itens  para cliente informando  id ou nome do cliente, ou data da locação, ou itens locados, ou data prevista de devolução dos itens **para que seja possível** consultar alguma locação.
+
+#### US114 - User Stories 114 -Alteração do Registro de Locação de itens para cliente como atendente
+
+**Como um** atendente **eu quero** alterar o registro da locação de itens para cliente informando  id ou nome do cliente, ou data da locação, ou itens locados, ou data prevista de devolução dos itens **para que seja possível** corregir erros no cadastro.
+
+#### US115 - User Stories 115 - Cadastro de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
+
+**Como um** atendente **eu quero** oferecer descontos e/ou ampliar prazos de devolução de itens locados por bons clientes, em função da politica da empresa **para que seja possível** benificiar o bom cliente e incentivar outros a serem bons clientes da locadora.
+
+#### US117 - User Stories 117 - Consulta de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
+
+**Como um** atendente **eu quero** consultar descontos e/ou prazos ampliados de devolução de itens locados por bons clientes **para que seja possível** consultar algum desconto e/ou prazos ampliados locação.
+
+#### US118 - User Stories 118 -Alteração o Registro de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
+
+**Como um** atendente **eu quero** alterar o registro de descontos e/ou prazos ampliados de devolução de itens locados por bons clientes **para que seja possível** corregir erros no cadastro.
+
+#### US119 - User Stories 119 - Registro de Devolução de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** registrar a devolução de itens locados por clientes informando os itens devolvidos e a data de devolução **para que seja possível** atualizar o histórico de locação.
+
+#### US1120- User Stories 120 - Consulta de Devolução de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** consultar a devolução de itens locados por clientes informando os itens devolvidos e/ou a data de devolução **para que seja possível** consultar alguma devolução de itens.
+
+#### US121 - User Stories 121 -Alteração o Registro de Devolução de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** alterar o registro de devolução de itens locados por clientes informando os itens devolvidos e/ou a data de devoluçã **para que seja possível** corregir erros no cadastro.
+
 #### US201 - User Stories 201 - Consulta simples ao acervo como cliente
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
@@ -169,6 +205,10 @@
 #### US202 - User Stories 202 - Consulta avançada ao acervo como cliente
 
 **Como um** cliente **eu quero** consultar o acervo digitando o título  (ou parte dele), original ou em português, e/ou informando gênero, tipo de mídia disponível, ator, diretor, nacionalidade, lançamentos **para que seja possível** verificar se o filme X existe na locadora e em quais tipos de mídias.
+
+#### US203 - User Stories 203 - Cancelamento de Reserva de Filme como cliente
+
+**Como um** cliente **eu quero** cancelar  junto a um atendente a reserva antes de totalizar 24 horas de disponibilidade do filme na locadora **para que seja possível** disponibilizar o filme para locação.
 
 #### US301 - User Stories 301 -Expiração do tempo de Reserva de filme para cliente como sistema
 
