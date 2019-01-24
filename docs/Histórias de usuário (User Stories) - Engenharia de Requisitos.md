@@ -34,25 +34,25 @@
 
 . O administrador deve informar os campos: perfil, user name, senha e email.
 
-#### US0102 - User Stories 102 - Cadastrar um cliente titular como atendente
+#### US0102 - User Stories 102 - Cadastrar um cliente como atendente
 
-**Como um** atedente **eu quero** cadastrar um cliente titular se for maior de idade informando o nome, email, endereço, telefone residencial, endereço de trabalho, telefone comercial, telefone celular, sexo, cpf e data de nascimento **para que seja possível** o cliente locar itens.
+**Como um** atedente **eu quero** cadastrar um cliente **para que seja possível** o cliente locar itens.
 
 **Criterios de Aceitação US102**
 
-. O atendente deve informar os campos referentes ao titular: nome , email, endereço, numero do telefone residencial, local de trabalho, numero do telefone comercial, numero do telefone celular, sexo, CPF e data de nascimento.
+. O atendente deve informar os campos referentes ao titular maior de idade: nome , email, endereço, numero do telefone residencial, local de trabalho, numero do telefone comercial, numero do telefone celular, sexo, CPF e data de nascimento.
 
 . Um titular so pode ter no máximo três dependentes.
 
 . O atendente deve informar os campos referentes aos dependentes: nome , email, sexo e data de nascimento.
 
-. Tanto titulares quanto dependentestêm um numero de inscrição, o qual é único por cliente.
+. Tanto titulares quanto dependentes têm um numero de inscrição, o qual é único por cliente.
 
-#### US114 - User Stories 114 - Cadastro de Reserva de filme para cliente como atendente
+#### US114 - User Stories 108 - Cadastro de Reserva de item para cliente como atendente
 
-**Como um** atendente **eu quero** reservar filmes para cliente  **para que seja possível** atender a necessidade do cliente.
+**Como um** atendente **eu quero** reservar itens para cliente  **para que seja possível** atender a necessidade do cliente.
 
-##### Criterios de Aceitação US114
+##### Criterios de Aceitação US108
 
 . O atendente deve reservar os filmes para titular e dependente cadastrados no sistema (Id e/ou nome).
 
@@ -68,21 +68,21 @@
 
 . Se o tipo o filme para aquele tipo de midia estiver na locadora, informar "Mídia Disponível na Locadora".
 
-#### US117 - User Stories 117 -Cancelamento de Reserva de filme para cliente como atendente
+#### US117 - User Stories 111 -Cancelamento de Reserva de itens para cliente como atendente
 
-**Como um** atendente **eu quero** cancelar  reserva de filmes **para que seja possível** remove-lo do cadastro reserva.
+**Como um** atendente **eu quero** cancelar  reserva de itens **para que seja possível** remove-lo do cadastro reserva.
 
-##### Criterios de Aceitação US117
+##### Criterios de Aceitação US111
 
 . O atendente deve informar os dados do titular e/ou dependente e/ou do filme cadastrados no sistema.
 
 . Se alguns dos dados estiverem incorretos, o sistema informa "Dados Incorretos".
 
-#### US118 - User Stories 118 - Registro de Locação como atendente
+#### US118 - User Stories 112 - Registro de Locação de itens para cliente como atendente
 
 **Como um** atendente **eu quero** registrar locações **para que seja possível** locar itens para clientes.
 
-##### Criterios de Aceitação US118
+##### Criterios de Aceitação US112
 
 . O atendente deve registrar as locações para titular e/ou dependente cadastrados no sistema.
 
@@ -96,11 +96,11 @@
 
 . Se alguns dos dados estiverem incorretos, o sistema informa "Dados Incorretos".
 
-#### US122 - User Stories 122 - Registro de Devolução de Itens como atendente
+#### US122 - User Stories 119 - Registro de Devolução de Itens como atendente
 
 **Como um** atendente **eu quero** registrar devoluções de itens **para que seja possível** receber os itens que foram locados.
 
-##### Criterios de Aceitação US122
+##### Criterios de Aceitação US119
 
 . O atendente deve informar o nome do item e/ou id.
 
@@ -109,6 +109,24 @@
 . Se o cliente pagar o saldo do valor dos itens locados e devolver todas as mídias locadas, registrar a data de devolução.
 
 . Se a data de devolução prevista acordada for maior que a data da devolução, informar o valor do saldo mais o valor de cada midia multiplicado pelo o numero de dias em atraso que deve ser pago.
+
+. Se alguns dos dados estiverem incorretos, o sistema informa "Dados Incorretos".
+
+#### US122 - User Stories 122 - Registro de Pagamento de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** registrar o pagamento de ietns para loacação **para que seja possível** registrar o pagamento dos itens locado.
+
+##### Criterios de Aceitação US122
+
+. O cliente pode pagar total ou parcialmente no ato da locação de itens.
+
+. O cliente deve pagar o saldo total no momento da devolução do itens.
+
+. O atendente deve registrar o nome do cliente, a forma de pagamento:
+
+  - dinheiro ;
+  - cheque - informar o banco, agencia , conta e numero do cheque;
+  - cartão - informar o valor, operadora do cartão, numero e data da operação.
 
 . Se alguns dos dados estiverem incorretos, o sistema informa "Dados Incorretos".
 

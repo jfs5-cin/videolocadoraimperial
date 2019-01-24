@@ -146,7 +146,7 @@
 
 **Como um** atendente **eu quero** desativar cliente informando o id ou o nome do cliente **para que não seja possível** o cliente locar itens e seus dependentes.
 
-#### US108 - User Stories 108 - Cadastro de Reserva de itens para cliente como atendente
+#### US108 - User Stories 108 - Registro de Reserva de itens para cliente como atendente
 
 **Como um** atendente **eu quero** reservar de itens para cliente adiplente informando o id ou nome do cliente, a data e hora da reserva, filme ou id do filme e o tipo de midia ou id da midia, caso não tenha itens do mesmo tipo de midia na locadora **para que seja possível** reservar itens para cliente.
 
@@ -162,7 +162,7 @@
 
 **Como um** atendente **eu quero** cancelar uma reserva de itens para cliente informando o id ou o nome do cliente ou, id ou nome do filme **para que seja possível** disponibiliza-lo para reserva para outro cliente.
 
-#### US112 - User Stories 112 - Cadastro de Locação de itens para cliente como atendente
+#### US112 - User Stories 112 - Registro de Locação de itens para cliente como atendente
 
 **Como um** atendente **eu quero** locar itens para cliente adiplente informando o id ou nome do cliente, a data e valorda locação, itens locados e data prevista de devolução para cada item (um dia para lançamentos e três dias para catalogo) **para que seja possível** atender o cliente.
 
@@ -174,7 +174,7 @@
 
 **Como um** atendente **eu quero** alterar o registro da locação de itens para cliente informando  id ou nome do cliente, ou data da locação, ou itens locados, ou data prevista de devolução dos itens **para que seja possível** corregir erros no cadastro.
 
-#### US115 - User Stories 115 - Cadastro de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
+#### US115 - User Stories 115 - Registro de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
 
 **Como um** atendente **eu quero** oferecer descontos e/ou ampliar prazos de devolução de itens locados por bons clientes, em função da politica da empresa **para que seja possível** benificiar o bom cliente e incentivar outros a serem bons clientes da locadora.
 
