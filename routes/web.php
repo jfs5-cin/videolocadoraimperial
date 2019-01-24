@@ -69,3 +69,11 @@ Route::post('/item/adicionar','ItemController@store');
 Route::get('/item/{id}/editar','ItemController@edit')->name('item.edit');
 Route::put('/item/{id}/editar','ItemController@update');
 Route::delete('/item/{id}/remover','ItemController@destroy')->name('item.destroy');
+
+/* Rotas do model User */
+Route::get('/usuario','UserController@index')->name('user.index');
+Route::get('/usuario/adicionar','UserController@create')->name('user.create');
+Route::post('/usuario/adicionar','UserController@store');
+Route::get('/usuario/{id}/editar','UserController@edit')->name('user.edit');
+Route::put('/usuario/{id}/editar','UserController@update');
+Route::delete('/usuario/{id}/remover','UserController@destroy')->name('user.destroy');
