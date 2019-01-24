@@ -8,7 +8,7 @@
 
 #### US002 - User Stories 002 - Incluir uma mídia como administrador
 
-**Como um** administrador **eu quero** incluir uma mídia informando o tipo da mídia (DVD, VHS, Blu-Ray e HD-DVD) e o valor  de locação de mídia **para que seja possível** incluir posteriormente itens informando o tipo de mídia.
+**Como um** administrador **eu quero** incluir uma mídia informando o tipo da mídia (DVD, VHS, Blu-Ray e HD-DVD) e o valor  de locação de mídia (catalogo:DVD, VHS e HD-DVD-R$ 5,00 e BluRay-R$ 7,50) **para que seja possível** incluir nos itens informando o tipo de mídia.
 
 #### US003 - User Stories 003 - Alterar uma mídia como administrador
 
@@ -56,7 +56,7 @@
 
 #### US014 - User Stories 014 - Incluir um tipo como administrador
 
-**Como um** administrador **eu quero** incluir um tipo informando uma descrição (catalogo ou lancamento), o prazo de devolução em dias e acrescimo em percentual **para que seja possível** incluir posteriormente nas midias informando o tipo.
+**Como um** administrador **eu quero** incluir um tipo informando uma descrição (catalogo ou lancamento), o prazo de devolução em dias e acrescimo (de 50% do Catalogo)  **para que seja possível** incluir posteriormente nas midias informando o tipo.
 
 #### US015 - User Stories 015 - Alterar um tipo como administrador
 
@@ -164,7 +164,7 @@
 
 #### US112 - User Stories 112 - Cadastro de Locação de itens para cliente como atendente
 
-**Como um** atendente **eu quero** locar itens para cliente adiplente informando o id ou nome do cliente, a data e valorda locação, itens locados e data prevista de devolução para cada item **para que seja possível** atender o cliente.
+**Como um** atendente **eu quero** locar itens para cliente adiplente informando o id ou nome do cliente, a data e valorda locação, itens locados e data prevista de devolução para cada item (um dia para lançamentos e três dias para catalogo) **para que seja possível** atender o cliente.
 
 #### US113 - User Stories 113 - Consulta de Locação de itens para cliente como atendente
 
@@ -182,21 +182,45 @@
 
 **Como um** atendente **eu quero** consultar descontos e/ou prazos ampliados de devolução de itens locados por bons clientes **para que seja possível** consultar algum desconto e/ou prazos ampliados locação.
 
-#### US118 - User Stories 118 -Alteração o Registro de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
+#### US118 - User Stories 118 -Alteração do Registro de Desconto e/ou Ampliação de Prazos de Devolução de itens para cliente como atendente
 
 **Como um** atendente **eu quero** alterar o registro de descontos e/ou prazos ampliados de devolução de itens locados por bons clientes **para que seja possível** corregir erros no cadastro.
 
 #### US119 - User Stories 119 - Registro de Devolução de itens locados por cliente como atendente
 
-**Como um** atendente **eu quero** registrar a devolução de itens locados por clientes informando os itens devolvidos e a data de devolução **para que seja possível** atualizar o histórico de locação.
+**Como um** atendente **eu quero** registrar a devolução de itens locados por clientes informando os itens devolvidos e a data de devolução (deve ser maior que a data de locação) **para que seja possível** atualizar o histórico de locação.
 
-#### US1120- User Stories 120 - Consulta de Devolução de itens locados por cliente como atendente
+#### US120- User Stories 120 - Consulta de Devolução de itens locados por cliente como atendente
 
 **Como um** atendente **eu quero** consultar a devolução de itens locados por clientes informando os itens devolvidos e/ou a data de devolução **para que seja possível** consultar alguma devolução de itens.
 
-#### US121 - User Stories 121 -Alteração o Registro de Devolução de itens locados por cliente como atendente
+#### US121 - User Stories 121 -Alteração do Registro de Devolução de itens locados por cliente como atendente
 
-**Como um** atendente **eu quero** alterar o registro de devolução de itens locados por clientes informando os itens devolvidos e/ou a data de devoluçã **para que seja possível** corregir erros no cadastro.
+**Como um** atendente **eu quero** alterar o registro de devolução de itens locados por clientes informando os itens devolvidos e/ou a data de devoluçã0 **para que seja possível** corregir erros no cadastro.
+
+#### US122 - User Stories 122 - Registro de Pagamento de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** registrar o pagamento total ou parcial no ato da locação de itens  ou o saldo de pagamento na devolução dos itens por clientes informando o nome do cliente, a forma de pagamento (dinheiro, cheque -banco, agencia , conta e numero do cheque- ou cartão-valor, operadora do cartão, numero e data da operação) **para que seja possível** registrar o pagamento dos itens locado.
+
+#### US123- User Stories 123 - Consulta de Pagamento de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** consultar o pagamento de itens locados por clientes informando o nome do cliente **para que seja possível** visualisar os pagamentos do cliente.
+
+#### US124 - User Stories 124 -Alteração do Registro de Pagamento de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** alterar o registro de pagamento de itens locados por clientes informando o nome do cliente **para que seja possível** corregir erros no registro de pagamentos do cliente.
+
+#### US125 - User Stories 125 - Registro de Pagamento com atraso de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** registrar o pagamento da multa por atraso na devolução de itens (numero de dias em atraso multiplicado pelo valor da locação do item) **para que seja possível** registrar o pagamento da multa.
+
+#### US126- User Stories 126 - Consulta de Pagamento com atraso de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** consultar o pagamento da multa por atraso na devolução de itens  **para que seja possível** visualisar os pagamentos de multa por atraso do cliente.
+
+#### US127 - User Stories 127 -Alteração do Registro de Pagamento com atraso de itens locados por cliente como atendente
+
+**Como um** atendente **eu quero** alterar o registro de pagamento da multa por atraso na devolução de itens  **para que seja possível** corregir erros no registro de pagamentos de multa por atraso do cliente.
 
 #### US201 - User Stories 201 - Consulta simples ao acervo como cliente
 
