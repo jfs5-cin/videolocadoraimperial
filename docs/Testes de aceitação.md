@@ -21,10 +21,10 @@
 | US015 - Alterar um Tipo             | 4     | 18         | 14.72 s | OK     |
 | US016 - Consultar um Tipo           | 2     | 7          | 4.38 s  | OK     |
 | US017 - Excluir um Tipo             | 3     | 3          | 7.63 s  | OK     |
-| US018 - Incluir um Filme            |       |            |         |        |
-| US019 - Alterar um Filme            |       |            |         |        |
-| US020 - Consultar um Filme          |       |            |         |        |
-| US021 - Excluir um Filme            |       |            |         |        |
+| US018 - Incluir um Filme            | 4     | 19         | 25.71 s | OK     |
+| US019 - Alterar um Filme            | 4     | 14         | 24.4 s  | OK     |
+| US020 - Consultar um Filme          | 2     | 11         | 9.29 s  | OK     |
+| US021 - Excluir um Filme            | 3     | 4          | 19.79 s | OK     |
 | US022 - Incluir um Item             | 4     | 9          | 22.51 s | OK     |
 | US023 - Alterar um Item             | 4     | 9          | 31.55 s | OK     |
 | US024 - Consultar um Item           | 2     | 5          | 9.62 s  | OK     |
