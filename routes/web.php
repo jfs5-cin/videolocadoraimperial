@@ -14,7 +14,9 @@
 /* Rotas da área pública */
 Route::get('/', 'SiteController@index')->name('index');
 Route::post('/', 'SiteController@index');
-Route::get('/filme/{id}', 'SiteController@movie_details')->name('movie_details');
+Route::get('/home', function(){
+    return redirect()->route('home');
+});
 
 /* Rotas da área administrativa */
 Route::get('/locadora', 'HomeController@index')->name('home');
@@ -77,3 +79,14 @@ Route::post('/usuario/adicionar','UserController@store');
 Route::get('/usuario/{id}/editar','UserController@edit')->name('user.edit');
 Route::put('/usuario/{id}/editar','UserController@update');
 Route::delete('/usuario/{id}/remover','UserController@destroy')->name('user.destroy');
+
+/* Rotas do model Movie */
+Route::get('/filme/tmdb/{search}','MovieController@tmdb_list')->name('movie.tmdb_list');
+Route::get('/filme','MovieController@index')->name('movie.index');
+Route::get('/filme/adicionar','MovieController@create')->name('movie.create');
+Route::post('/filme/adicionar','MovieController@store');
+Route::get('/filme/adicionar/{id}','MovieController@create_tmdb')->name('movie.create_tmdb');
+Route::get('/filme/{id}/editar','MovieController@edit')->name('movie.edit');
+Route::put('/filme/{id}/editar','MovieController@update');
+Route::delete('/filme/{id}/remover','MovieController@destroy')->name('movie.destroy');
+Route::get('/filme/{id}', 'SiteController@movie_details')->name('movie_details');
