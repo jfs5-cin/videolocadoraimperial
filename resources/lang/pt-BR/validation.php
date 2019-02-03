@@ -151,12 +151,13 @@ return [
         'state'                     => 'estado',
         'country'                   => 'país',
         'cep'                       => 'CEP',
-		'serial_number'             => 'número serial',
+        'serial_number'             => 'número serial',
         'purchase_date'             => 'data da compra',
         'movie_id'                  => 'filme',
         'media_id'                  => 'mídia',
         'user'                      => 'usuário',
         'profile'                   => 'perfil',
+
         'poster'                    => 'capa',
         'title'                     => 'título',
         'original_title'            => 'título original',
@@ -167,6 +168,10 @@ return [
         'synopsis'                  => 'sinopse',
         'duraction'                 => 'duração',
         'type_id'                   => 'tipo',
+        'birth_date'                => 'data de nascimento',
+        'cell_phone'                => 'telefone celular',
+        'distributor_id'            => 'distribuidora',
+
     ],
 
 ];
