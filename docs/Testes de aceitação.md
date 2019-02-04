@@ -34,6 +34,12 @@
 | US028 - Consultar um Usuário        | 2     | 5          | 5.8 s   | OK     |
 | US029 - Excluir um Usuário          | 3     | 3          | 10.76 s | OK     |
 | US101 - Acesso como atendente       | 3     | 14         | 13.5 s  | OK     |
+| US102 - Incluir um cliente          | 4     | 16         | 28.82 s | OK     |
+| US103 - Alterar um cliente          | 4     | 19         | 31.45 s | OK     |
+| US104 - Consultar um cliente        | 2     | 5          | 8.09 s  | OK     |
+| US105 - Excluir um cliente          | 3     | 5          | 13.71 s | OK     |
+| US106 - Ativar um cliente           | 2     | 3          | 7.43 s  | OK     |
+| US107 - Desativar um cliente        | 2     | 3          | 7.52 s  | OK     |
 | US201 - Consulta simples ao acervo  | 3     | 4          | 7.3 s   | OK     |
 | US202 - Consulta avançada ao acervo | 1     | 14         | 25.76 s | OK     |
 
