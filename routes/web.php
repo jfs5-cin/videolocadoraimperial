@@ -92,3 +92,16 @@ Route::get('/filme/{id}/editar','MovieController@edit')->name('movie.edit');
 Route::put('/filme/{id}/editar','MovieController@update');
 Route::delete('/filme/{id}/remover','MovieController@destroy')->name('movie.destroy');
 Route::get('/filme/{id}', 'SiteController@movie_details')->name('movie_details');
+
+/* Rotas do model Client/Holder */
+Route::get('/cliente','ClientController@index')->name('client.index');
+Route::get('/cliente/adicionar','ClientController@create')->name('client.create');
+Route::post('/cliente/adicionar','ClientController@store');
+Route::get('/cliente/{id}/dependente/adicionar','ClientController@dependent_create')->name('dependent.create');
+Route::post('/cliente/{id}/dependente/adicionar','ClientController@dependent_store');
+Route::get('/cliente/{id}/editar','ClientController@edit')->name('client.edit');
+Route::put('/cliente/{id}/editar','ClientController@update');
+Route::post('/cliente/{id}/editar/ativo','ClientController@active')->name('client.active');
+Route::get('/cliente/{id}/dependente/editar','ClientController@dependent_edit')->name('dependent.edit');
+Route::put('/cliente/{id}/dependente/editar','ClientController@dependent_update');
+Route::delete('/cliente/{id}/remover','ClientController@destroy')->name('client.destroy');
