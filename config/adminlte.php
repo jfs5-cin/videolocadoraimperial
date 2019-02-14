@@ -118,6 +118,7 @@ return [
             'text' => 'Locação',
             'icon' => 'sign-out-alt',
             'can'  => 'customer_service',
+            'route'=> 'rental.index',
         ],
         [
             'text' => 'Reserva',
@@ -134,7 +135,7 @@ return [
             'text' => 'Gênero',
             'icon' => 'tags',
             'can'  => 'administrator',
-			'route'=> 'genre.index',
+            'route'=> 'genre.index',
         ],
         [
             'text' => 'Tipo',
@@ -152,7 +153,7 @@ return [
             'text' => 'Distribuidora',
             'icon' => 'boxes',
             'can'  => 'administrator',
-            'route'=> 'distributor.index',
+            'route'  => 'distributor.index',
         ],
         [
             'text' => 'Filme',
@@ -176,7 +177,7 @@ return [
             'text' => 'Usuário',
             'icon' => 'user',
             'can'  => 'administrator',
-            'route'=> 'user.index',
+            'route' => 'user.index',
         ],
         'ACERVO',
         [

@@ -91,6 +91,7 @@ Route::get('/filme/adicionar/{id}','MovieController@create_tmdb')->name('movie.c
 Route::get('/filme/{id}/editar','MovieController@edit')->name('movie.edit');
 Route::put('/filme/{id}/editar','MovieController@update');
 Route::delete('/filme/{id}/remover','MovieController@destroy')->name('movie.destroy');
+Route::get('/filme/{id}/qrcode','MovieController@qrcode')->name('movie.qrcode');
 Route::get('/filme/{id}', 'SiteController@movie_details')->name('movie_details');
 
 /* Rotas do model Client/Holder */
@@ -105,3 +106,14 @@ Route::post('/cliente/{id}/editar/ativo','ClientController@active')->name('clien
 Route::get('/cliente/{id}/dependente/editar','ClientController@dependent_edit')->name('dependent.edit');
 Route::put('/cliente/{id}/dependente/editar','ClientController@dependent_update');
 Route::delete('/cliente/{id}/remover','ClientController@destroy')->name('client.destroy');
+Route::get('/cliente/{id}/carteira','ClientController@identity')->name('client.identity');
+
+/* Rotas RN locadora */
+Route::get('/return_date/{days}','RentalController@return_date')->name('rental.return_date');
+Route::get('/locacao/listar','RentalController@index')->name('rental.index');
+Route::post('/locacao/gravar','RentalController@rental_save')->name('rental.save');
+Route::get('/locacao/cliente','RentalController@rental_client')->name('rental.client');
+Route::get('/locacao/items/{id}', 'RentalController@rental_items2')->name('rental.items');
+Route::put('/locacao/editar/{id}','RentalController@edit')->name('rental.edit');
+Route::put('/locacao/cancelar/{id}','RentalController@cancel')->name('rental.cancel');
+Route::get('/locacao/add_qrcode/{id}','RentalController@rental_add_item_qrcode')->name('rental.add_qrcode');
