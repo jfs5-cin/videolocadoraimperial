@@ -165,6 +165,72 @@
         </div>
     </div>
     
+    <!-- Modal -->
+    <div class="modal fade" id="dialog_edit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Alterar item:</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group col-md-12">
+                            <input type="hidden" class="form-control" id="id_item" name="id_item" disabled>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="title">Título</label>
+                            <input type="text" class="form-control" id="title" name="title" disabled>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="media">Mídia</label>
+                            <input type="text" class="form-control" id="media" name="media" disabled>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="type">Tipo</label>
+                            <input type="text" class="form-control" id="type" name="type" disabled>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="price">Valor</label>
+                            <input type="text" class="form-control" id="price" name="price" disabled>
+                        </div>
+                        <div id="div_discount" class="form-group col-md-6">
+                            <label for="discount">Desconto</label>
+                            <input type="text" class="form-control" id="discount" name="discount">
+                            <span class="help-block" style="display: none;">
+                                <strong>O valor do desconto deve ser numérico e igual ou inferior ao valor do item.</strong>
+                            </span>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="return_deadline">Prazo</label>
+                            <input type="text" class="form-control" id="return_deadline" name="return_deadline" disabled>
+                        </div>
+                        <div id="div_return_deadline_extension" class="form-group col-md-6">
+                            <label for="return_deadline_extension">Prorrogação</label>
+                            <input type="text" class="form-control" id="return_deadline_extension" name="return_deadline_extension">
+                            <span class="help-block" style="display: none;">
+                                <strong>A quantidade de dias de prorrogação dever ser entre 0 e 10.</strong>
+                            </span>
+                        </div>
+                         
+                        {{-- <div class="form-group">
+                            <label for="discount">Desconto</label>
+                            <input type="text" class="form-control" id="discount" name="discount" placeholder="Valor do desconto">
+                            <span class="help-block" style="display: none;">
+                                <strong>O valor do desconto deve ser igual ou inferior ao valor do item.</strong>
+                            </span>
+                        </div> --}}
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="edit-btn">Alterar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('js')
@@ -173,8 +239,28 @@
     <script src="{{ asset('vendor/webcodecamjs/js/webcodecamjs.js') }}"></script>
     <script>
         var myMap = new Map();
+        function IsNumeric(valor) {
+            /* var RE = /^\d*\.?\d*$/; */
+            var RE = /^-?\d*\,?\d+$/;
+            if (RE.test(valor)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function IsInteger(valor) {
+            /* var RE = /^\d*\.?\d*$/; */
+            var RE = /^\d+$/;
+            if (RE.test(valor)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
         function refreshTable(myMap){
+            /* var data_de_devolucao = 0; */
             $('#tb_items tbody').html('');
             if(myMap.size > 0){
                 $('button[type="submit"]').removeAttr("disabled");
@@ -191,10 +277,14 @@
                 if (value.data.return_deadline_extension != 0){
                     $.get(rota, function(data, status){
                         if (status == 'success'){
-                            data_de_devolucao = data;
+                            value.data.return_date = data;
+                            data_de_devolucao = value.data.return_date;
                         }
+                    }).done(function (){
+                        data_de_devolucao = value.data.return_date;
                     });
                 }
+                
                 //---------------------------
                 linha += "<tr>";
                 linha += "<td>" + value.data.title + "</td>";
@@ -204,7 +294,7 @@
                 linha += "<td>" + value.data.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</td>";
                 linha += "<td>" + value.data.discount.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</td>";
                 linha += "<td>" + value.data.return_deadline_extension + "</td>";
-                linha += "<td>" + data_de_devolucao + "</td>";
+                linha += "<td>" + value.data.return_date + "</td>";
                 linha += "<td>" + total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</td>";
                 linha += "<td>";
                     linha += "<div class='btn-group'>";
@@ -282,6 +372,74 @@
                 }
                 json = JSON.stringify(data_items);
                 $('#data_items').val(json);
+            });
+
+            $('#tb_items').on( "click", ".btn_editar", function() {
+                var key = $(this).attr('cod') * 1;
+                console.log(key);
+                var value = myMap.get(key);
+                $('#id_item').val(value.data.id);
+                $('#title').val(value.data.title);
+                $('#media').val(value.data.media);
+                $('#type').val(value.data.type);
+                $('#return_deadline').val(value.data.return_deadline);
+                $('#price').val(value.data.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $('#discount').val(value.data.discount.toLocaleString('pt-BR'));
+                $('#return_deadline_extension').val(value.data.return_deadline_extension.toLocaleString('pt-BR'));
+                $('#div_discount').removeClass('has-error');
+                $('#div_discount .help-block').hide();
+                $('#div_return_deadline_extension').removeClass('has-error');
+                $('#div_return_deadline_extension .help-block').hide();
+                $('#dialog_edit').modal();
+            });
+
+            $('#edit-btn').click(function(){
+                var key = $('#id_item').val() * 1;
+                var value = myMap.get(key);
+                var update = true;
+                //desconto
+                if ( !IsNumeric($('#discount').val()) ){
+                    $('#div_discount').addClass('has-error');
+                    $('#div_discount .help-block').show();
+                    update = false;
+                } else {
+                    var str = $('#discount').val().replace(/\,/g,'.');
+                    var discount = str * 1;
+                    if (discount >= 0 && discount <= value.data.price){
+                        $('#div_discount').removeClass('has-error');
+                        $('#div_discount .help-block').hide();
+                        value.data.discount = discount;
+                    } else {
+                        $('#div_discount').addClass('has-error');
+                        $('#div_discount .help-block').show();
+                        update = false;
+                    }
+                }
+                //prazo
+                if ( !IsInteger($('#return_deadline_extension').val()) ){
+                    $('#div_return_deadline_extension').addClass('has-error');
+                    $('#div_return_deadline_extension .help-block').show();
+                    update = false;
+                } else {
+                    var str = $('#return_deadline_extension').val().replace(/\,/g,'.');
+                    var return_deadline_extension = str * 1;
+                    if (return_deadline_extension >= 0 && return_deadline_extension <= 10){
+                        $('#div_return_deadline_extension').removeClass('has-error');
+                        $('#div_return_deadline_extension .help-block').hide();
+                        value.data.return_deadline_extension = return_deadline_extension;
+                    } else {
+                        $('#div_return_deadline_extension').addClass('has-error');
+                        $('#div_return_deadline_extension .help-block').show();
+                        update = false;
+                    }
+                }
+                
+                if (update){
+                    myMap.set(key, value);
+                    refreshTable(myMap);
+                    $('#dialog_edit').modal('hide');
+                    refreshTable(myMap);
+                }
             });
 
         });
