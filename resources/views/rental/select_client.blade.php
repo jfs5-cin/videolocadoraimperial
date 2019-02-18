@@ -32,7 +32,7 @@
         .select2-container--default .select2-selection--single, .select2-selection .select2-selection--single{
             padding: 3px !important;
         }
-    
+
     </style>
 @stop
 
@@ -48,7 +48,7 @@
 @section('content')
     <div class="box">
         <div class="box-header">
-            
+
         </div>
         <div class="box-body" style="min-height: 70vh">
             @if (session('erro'))
@@ -67,9 +67,9 @@
                                 <label for="client_id">Cliente</label>
                                 <select class="form-control select2" id="client_id" style="width: 100%;">
                                     <option disabled selected value> -- selecione o cliente -- </option>
-                                @foreach($clients as $c)
+                                @foreach($clients->sortBy('name') as $c)
                                     <option value="{{ $c->id }}">
-                                        {{ $c->name }} 
+                                        {{ $c->name }}
                                     </option>
                                 @endforeach
                                 </select>
@@ -106,7 +106,7 @@
 
         </div>
     </div>
-    
+
 @stop
 
 @section('js')
@@ -130,7 +130,7 @@
                 }
             };
             new WebCodeCamJS("canvas").init(arg).play();
-    
+
             $('#client_id').select2({
                 placeholder: "Selecione o cliente"
             });

@@ -116,4 +116,6 @@ Route::get('/locacao/cliente','RentalController@rental_client')->name('rental.cl
 Route::get('/locacao/items/{id}', 'RentalController@rental_items2')->name('rental.items');
 Route::put('/locacao/editar/{id}','RentalController@edit')->name('rental.edit');
 Route::put('/locacao/cancelar/{id}','RentalController@cancel')->name('rental.cancel');
+Route::get('/locacao/devolucao/{id}','RentalController@devolution_index')->name('rental.devolution');
+Route::post('/locacao/devolucao/{id}','RentalController@devolution');
 Route::get('/locacao/add_qrcode/{id}','RentalController@rental_add_item_qrcode')->name('rental.add_qrcode');

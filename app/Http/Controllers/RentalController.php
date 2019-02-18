@@ -127,7 +127,7 @@ class RentalController extends Controller
         } else {
             $response['status'] = 'Available';
         }
-        
+
         $data = array();
         if ($item != null) {
             $data['id'] = $item->id;
@@ -139,7 +139,7 @@ class RentalController extends Controller
             $data['return_deadline'] = $item->movie->type->return_deadline;
             $data['return_deadline_extension'] = 0;
             $data['return_date'] = Util::return_date($item->movie->type->return_deadline);
-        } 
+        }
         $response['data'] = $data;
         return json_encode($response);
 
@@ -147,7 +147,7 @@ class RentalController extends Controller
 
     public function edit()
     {
-        
+
     }
 
     public function cancel($id)
@@ -163,11 +163,61 @@ class RentalController extends Controller
                     $item->status = 'Disponível';
                     $item->save();
                 }
-            });    
+            });
         } catch (\Exception $e) {
             return redirect()->route('rental.index', $client_id)->with('erro', 'Erro na tentativa de cancelar a locação.');
         }
         return redirect()->route('rental.index');
+    }
+
+    public function devolution_index($id)
+    {
+        $this->surcharge_calc($id);
+        $rental = Rental::with('client.holder','items.item.movie.type', 'items.item.media')->findOrfail($id);
+        return view('rental.devolution', compact('rental'));
+    }
+    public function devolution($id, Request $request)
+    {
+        try {
+            DB::transaction(function () use ($request){
+                foreach ($request->itens as $item) {
+                    $i = Rental_item::findOrfail($item);
+                    $i->return_date = Carbon::now()->format('Y-m-d');
+                    $i->return_user = \Auth::user()->id;
+                    $imovie = Item::findOrfail($i->item_id);
+                    $imovie->status = "Disponível";
+                    $i->save();
+                    $imovie->save();
+                    /* $rental = Rental::with('items')->whereHas('items', function ($query){
+                        $query->whereNull('return_date');
+                    })->where('id', $i->rental_id)->first(); */
+                }
+                $rental = Rental::with('items')->findOrfail($i->rental_id);
+                if($rental->items->where('return_date',null)->count() == 0){
+                    $rental->status = "Concluída";
+                    $rental->save();
+                }
+            });
+        } catch (\Exception $e) {
+            dd($e);
+            return redirect()->route('rental.devolution',  $id)->with('erro', 'Erro na tentativa de devolver a locação.');
+        }
+        return redirect()->route('rental.devolution', $id);
+    }
+    public function surcharge_calc($id)
+    {
+        $rental = Rental::with('items')->findOrfail($id);
+        $msg = array();
+        foreach ($rental->items as $item) {
+            $data = Carbon::parse($item->expected_return_date);
+            $now = Carbon::now();
+            $diff = $data->diffInDays($now, false);
+            array_push($msg,"$item->expected_return_date, diff: $diff");
+            if($diff > 0){
+                $item->surcharge = $diff * $item->item_price;
+                $item->save();
+            }
+        }
     }
 
 }
