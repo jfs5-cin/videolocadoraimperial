@@ -51,9 +51,9 @@ class Us101Test extends DuskTestCase
                     ->type('password', '123456')
                     ->click('button[type=submit]')
                     ->assertPathIs('/locadora')
-                    ->assertSeeLink('Locação')
-                    ->assertSeeLink('Reserva')
-                    ->assertSeeLink('Devolução')
+                    ->assertSeeLink('Locação e devolução')
+                    /* ->assertSeeLink('Reserva')
+                    ->assertSeeLink('Devolução') */
                     ->assertSeeLink('Cliente')
                     ->clickLink('Sair');
         });
@@ -70,9 +70,9 @@ class Us101Test extends DuskTestCase
                     ->type('password', '123456')
                     ->click('button[type=submit]')
                     ->assertPathIs('/locadora')
-                    ->assertDontSeeLink('Locação')
-                    ->assertDontSeeLink('Reserva')
-                    ->assertDontSeeLink('Devolução')
+                    ->assertDontSeeLink('Locação e devolução')
+                    /* ->assertDontSeeLink('Reserva')
+                    ->assertDontSeeLink('Devolução') */
                     ->assertDontSeeLink('Cliente')
                     ->clickLink('Sair');
         });

@@ -115,12 +115,12 @@ return [
             'can' => 'customer_service',
         ],
         [
-            'text' => 'Locação',
+            'text' => 'Locação e devolução',
             'icon' => 'sign-out-alt',
             'can'  => 'customer_service',
             'route'=> 'rental.index',
         ],
-        [
+        /* [
             'text' => 'Reserva',
             'icon' => 'clipboard-check',
             'can'  => 'customer_service',
@@ -129,7 +129,7 @@ return [
             'text' => 'Devolução',
             'icon' => 'sign-in-alt',
             'can'  => 'customer_service',
-        ],
+        ], */
         'CADASTRO',
         [
             'text' => 'Gênero',

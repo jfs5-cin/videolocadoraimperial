@@ -22,7 +22,7 @@ class RentalController extends Controller
 
     public function index()
     {
-        $rentals = Rental::with('client.holder','items')->get();
+        $rentals = Rental::with('client.holder','items')->orderBy('id', 'desc')->get();
         return view('rental.index', compact('rentals'));
     }
 

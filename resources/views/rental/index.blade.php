@@ -71,9 +71,9 @@
                                 {{ csrf_field() }}
                                 {{ method_field('PUT')}}
                                 <div class="btn-group">
-                                    <abbr title="Registrar Pagamentos"><a class="btn btn-default btn-sm" style="color: darkgreen"><i class="fas fa-dollar-sign"></i></a></abbr>
+                                    {{-- <abbr title="Registrar Pagamentos"><a class="btn btn-default btn-sm" style="color: darkgreen"><i class="fas fa-dollar-sign"></i></a></abbr> --}}
                                     <abbr title="Registrar Devoluções"><a href="{{ route('rental.devolution', $r->id) }}"  class="btn btn-default btn-sm" style="color: darkblue"><i class="fas fa-sign-in-alt"></i></a></abbr>
-                                    <abbr title="Modificar locação"><a href="{{ route('rental.edit', $r->id) }}" class="btn btn-default btn-sm" style="color: black"><i class="fas fa-edit"></i></a></abbr>
+                                    {{-- <abbr title="Modificar locação"><a href="{{ route('rental.edit', $r->id) }}" class="btn btn-default btn-sm" style="color: black"><i class="fas fa-edit"></i></a></abbr> --}}
                                     <abbr title="Cancelar locação"><button type="submit" class="btn btn-default btn-sm form-delete" style="color: darkred"><i class="fas fa-ban"></i></button></abbr>
                                 </div>
                             </form>

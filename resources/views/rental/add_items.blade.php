@@ -260,7 +260,6 @@
         }
 
         function refreshTable(myMap){
-            /* var data_de_devolucao = 0; */
             $('#tb_items tbody').html('');
             if(myMap.size > 0){
                 $('button[type="submit"]').removeAttr("disabled");
@@ -270,8 +269,9 @@
             for (var value of myMap.values()) {
                 var linha = "";
                 var total = value.data.price - value.data.discount;
+                var data_de_devolucao = value.data.return_date;
                 //Calcular data de devolução
-                var prazo = value.data.return_deadline + value.data.return_deadline_extension;
+                /* var prazo = value.data.return_deadline + value.data.return_deadline_extension;
                 var data_de_devolucao = value.data.return_date;
                 var rota = "{{ route('rental.return_date', '') }}/" + prazo;
                 if (value.data.return_deadline_extension != 0){
@@ -283,7 +283,7 @@
                     }).done(function (){
                         data_de_devolucao = value.data.return_date;
                     });
-                }
+                } */
                 
                 //---------------------------
                 linha += "<tr>";
@@ -435,10 +435,24 @@
                 }
                 
                 if (update){
-                    myMap.set(key, value);
-                    refreshTable(myMap);
-                    $('#dialog_edit').modal('hide');
-                    refreshTable(myMap);
+                    //Calcular data de devolução
+                    var prazo = value.data.return_deadline + value.data.return_deadline_extension;
+                    var rota = "{{ route('rental.return_date', '') }}/" + prazo;
+                    if (value.data.return_deadline_extension != 0){
+                        $.get(rota, function(data, status){
+                            if (status == 'success'){
+                                value.data.return_date = data;
+                            }
+                        }).done(function (){
+                            myMap.set(key, value);
+                            refreshTable(myMap);
+                            $('#dialog_edit').modal('hide');
+                        });
+                    } else {
+                        myMap.set(key, value);
+                        refreshTable(myMap);
+                        $('#dialog_edit').modal('hide');
+                    }
                 }
             });
 
